@@ -15,6 +15,7 @@ const createHandler: (options: CreateHandlerOptions) => handler = fckCreateHandl
 import { log } from 'logger'
 
 const app = new Koa()
+
 const router = new Router()
 const port = process.env.PORT || 3000
 const handler = createHandler({
@@ -24,6 +25,7 @@ const handler = createHandler({
 
 router.post('/webhooks/*', (ctx, next) => {
   handler(ctx.req, ctx.res, err => ctx.throw(404, err))
+  return next()
 })
 
 handler.on('error', err => {
