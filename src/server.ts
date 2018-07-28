@@ -18,7 +18,7 @@ const app = new Koa()
 const router = new Router()
 const port = process.env.PORT || 3000
 const handler = createHandler({
-  path: '/webhook',
+  path: '/webhook/github',
   secret: 'A7A2C229-406C-4F7D-8788-DA9269722261',
 })
 
