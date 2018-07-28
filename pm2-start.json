@@ -1,0 +1,7 @@
+{
+  "apps": [{
+    "name": "port-config:sync",
+    "script": "npm",
+    "args": "run sync"
+  }]
+}
