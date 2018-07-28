@@ -2,6 +2,6 @@
   "apps": [{
     "name": "homepage",
     "script": "npm",
-    "args": "run sync"
+    "args": "run start"
   }]
 }
