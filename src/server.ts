@@ -6,7 +6,11 @@ import * as bodyParser from 'koa-bodyparser'
 import * as Router from 'koa-router'
 import * as serve from 'koa-static'
 
-import { default as createHandler } from 'github-webhook-handler'
+import * as fckCreateHandler from 'github-webhook-handler'
+
+import { CreateHandlerOptions, handler } from 'github-webhook-handler'
+
+const createHandler: (options: CreateHandlerOptions) => handler = fckCreateHandler as any
 
 import { log } from 'logger'
 
@@ -15,7 +19,7 @@ const router = new Router()
 const port = process.env.PORT || 3000
 const handler = createHandler({
   path: '/webhook',
-  secret: 'myhashsecret',
+  secret: 'A7A2C229-406C-4F7D-8788-DA9269722261',
 })
 
 router.post('/webhooks', (ctx, next) => {
