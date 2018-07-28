@@ -52,6 +52,7 @@ app
   .use(router.allowedMethods())
   .use(bodyParser())
   .use(async ctx => {
+    log(ctx.request.headers)
     log(ctx.request.body)
     log(ctx.request.url)
     ctx.body = 'ok'
