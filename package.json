@@ -1,0 +1,35 @@
+{
+  "name": "homepage-source",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx nodemon",
+    "start": "DEBUG='hp*' ts-node -r tsconfig-paths/register src/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lordnox/homepage-source.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lordnox/homepage-source/issues"
+  },
+  "homepage": "https://github.com/lordnox/homepage-source#readme",
+  "dependencies": {
+    "@raynode/nx-logger": "^6.0.0",
+    "@raynode/nx-logger-debug": "^1.1.0",
+    "@types/koa": "^2.0.46",
+    "@types/koa-static": "^4.0.0",
+    "koa": "^2.5.2",
+    "koa-bodyparser": "^4.2.1",
+    "koa-static": "^5.0.0",
+    "nodemon": "^1.18.3",
+    "ts-node": "^7.0.0",
+    "tsconfig-paths": "^3.4.2",
+    "typescript": "^2.9.2"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "lib": ["es2016", "dom", "es7", "esnext", "es2015"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "noEmitOnError": true,
+    "outDir": "build",
+    "rootDir": "src",
+    "sourceMap": true,
+    "target": "es6"
+  },
+  "include": [
+    "./src/**/*.ts"
+  ]
+}
