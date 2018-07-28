@@ -22,10 +22,8 @@ const handler = createHandler({
   secret: 'A7A2C229-406C-4F7D-8788-DA9269722261',
 })
 
-router.post('/webhooks', (ctx, next) => {
-  handler(ctx.req, ctx.res, err => {
-    ctx.throw(404, err)
-  })
+router.post('/webhooks/*', (ctx, next) => {
+  handler(ctx.req, ctx.res, err => ctx.throw(404, err))
 })
 
 handler.on('error', err => {
