@@ -1,4 +1,3 @@
 # homepage-source
 
-Simple Homepage
-With Github Webhooks
+Colorful Webpage
