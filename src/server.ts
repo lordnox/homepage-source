@@ -46,15 +46,16 @@ handler.on('issues', event => {
     event.payload.issue.title)
 })
 
-app.use(serve(join(__dirname, '..', 'public')))
-
-app.use(bodyParser())
-app.use(async ctx => {
-  log(ctx.request.body)
-  log(ctx.request.url)
-  ctx.body = 'ok'
-})
-
-app.listen(port, () => {
-  log(`Listening on ${port}`)
-})
+app
+  .use(serve(join(__dirname, '..', 'public')))
+  .use(router.routes())
+  .use(router.allowedMethods())
+  .use(bodyParser())
+  .use(async ctx => {
+    log(ctx.request.body)
+    log(ctx.request.url)
+    ctx.body = 'ok'
+  })
+  .listen(port, () => {
+    log(`Listening on ${port}`)
+  })
